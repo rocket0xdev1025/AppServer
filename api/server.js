@@ -4,10 +4,10 @@ const app = express();
 
 app.use(cors());
 
-app.get('/api/site-consent', async (req, res) => {
+app.get('/api/stats', async (req, res) => {
 
   try {
-    const response = await fetch('https://nautilo.ai/api/site-consent');
+    const response = await fetch('https://schiffy.gold/api/stats');
     const data = await response.json();
     res.json(data);
   } catch (err) {
