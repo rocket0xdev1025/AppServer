@@ -18,6 +18,49 @@ app.get('/api/radar', async (req, res) => {
   }
 });
 
+app.get('/api/chains', async (req, res) => {
+
+  try {
+    const response = await fetch('https://swarmengine.tech/api/chains');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Error fetching data:', err);
+    res.status(500).json({
+      error: 'Failed to retrieve data'
+    });
+  }
+});
+
+app.get('/api/stats', async (req, res) => {
+
+  try {
+    const response = await fetch('https://swarmengine.tech/api/stats');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Error fetching data:', err);
+    res.status(500).json({
+      error: 'Failed to retrieve data'
+    });
+  }
+});
+
+app.get('/api/cabals', async (req, res) => {
+
+  try {
+    const response = await fetch('https://swarmengine.tech/api/cabals');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Error fetching data:', err);
+    res.status(500).json({
+      error: 'Failed to retrieve data'
+    });
+  }
+});
+
+
 
 // app.get('/quote', async (req, res) => {
 
