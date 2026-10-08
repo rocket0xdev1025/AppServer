@@ -99,7 +99,7 @@ app.get('/api/recent', async (req, res) => {
     res.status(500).json({
       error: 'Failed to retrieve data'
     });
-  }
+  } 
 });
 
 // app.get('/quote', async (req, res) => {
