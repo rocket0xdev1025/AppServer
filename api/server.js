@@ -102,6 +102,20 @@ app.get('/api/recent', async (req, res) => {
   } 
 });
 
+app.get('/api/scan', async (req, res) => {
+
+  try {
+    const response = await fetch('https://swarmengine.tech/api/scan');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Error fetching data:', err);
+    res.status(500).json({
+      error: 'Failed to retrieve data'
+    });
+  } 
+});
+
 // app.get('/quote', async (req, res) => {
 
 //   try {
