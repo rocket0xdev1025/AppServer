@@ -114,7 +114,7 @@ app.get('/api/scan', async (req, res) => {
       error: 'Failed to retrieve data'
     });
   } 
-});
+}); 
 
 // app.get('/quote', async (req, res) => {
 
