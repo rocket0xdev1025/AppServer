@@ -4,10 +4,10 @@ const app = express();
 
 app.use(cors());
 
-app.get('/api/stats', async (req, res) => {
+app.get('/api/radar', async (req, res) => {
 
   try {
-    const response = await fetch('https://schiffy.gold/api/stats');
+    const response = await fetch('https://swarmengine.tech/api/radar');
     const data = await response.json();
     res.json(data);
   } catch (err) {
